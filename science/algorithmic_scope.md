@@ -102,13 +102,22 @@ U_j=\exp\!\left[\frac\pi4(A_j^\dagger-A_j)\right].
 
 This is a fixed four-mode number-conserving **non-Gaussian** gate, counted once per block. With independent block operations, the construction uses $`4m`$ system modes, $`O(m)`$ gates, and constant parallel depth. It assumes the stated local gate primitive rather than treating a quartic gate as a free orbital rotation. The equivalent occupation-qubit construction uses one Hadamard, three CNOTs, and two $`X`$ gates per block; it is exact and Clifford, although its intermediate states need not preserve particle number. The [model document](model.md#exact-preparation-and-charged-resources) checks the signs and gate count.
 
-The same state has several compact classical forms. In the prescribed mode order it is a product of geminals,
+The same state has several compact classical forms. Define the two pair-creation operators on block $`j`$ by
+
+```math
+L_j^\dagger=a_{4j-3}^\dagger\,a_{4j-2}^\dagger,
+```
+
+```math
+R_j^\dagger=a_{4j-1}^\dagger\,a_{4j}^\dagger.
+```
+
+In the prescribed mode order, the state is a product of geminals:
 
 ```math
 |\Omega_m\rangle=2^{-m/2}
 \prod_{j=1}^{m}
-\left(a_{4j-3}^\dagger a_{4j-2}^\dagger+
-a_{4j-1}^\dagger a_{4j}^\dagger\right)|\mathrm{vac}\rangle.
+\left(L_j^\dagger+R_j^\dagger\right)|\mathrm{vac}\rangle.
 ```
 
 Keeping these $`m`$ factors avoids expanding their $`2^m`$ occupation terms. It is also a product of four-mode tensors, or an occupation-qubit matrix-product state with bond dimension at most two within a block and one between blocks.

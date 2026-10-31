@@ -1,6 +1,6 @@
 # Certifying a representation obstruction from local energy
 
-A measurement on one classically chosen four-mode block per copy suffices to estimate the energy density of the [model Hamiltonian](model.md). Combining that estimate with the [Gaussian-rank theorem](gaussian_rank.md#low-energy-theorem) certifies an exponential representation requirement at fixed energy slack. The full-state copy count is independent of system size at fixed precision and confidence; preparing those full states is a separate, extensive resource.
+A measurement on one classically chosen four-mode block per copy suffices to estimate the energy density of the [model Hamiltonian](model.md). Combining that estimate with the [Gaussian-rank theorem](gaussian_rank.md#low-energy-theorem) certifies an exponential representation requirement at fixed energy slack. The full-state copy count is independent of system size at fixed precision and confidence; full-state preparation is a separately charged resource.
 
 ## Measurement model
 
@@ -124,14 +124,14 @@ Purity is not required for a meaningful representation certificate, but the clai
 
 ```math
 \mathcal C_{m,K}
-=\overline{\mathrm{conv}}\left\{
+=\mathrm{cl}\left(\mathrm{conv}\left\{
 |\psi\rangle\langle\psi|:
 \|\psi\|_2=1,
 \quad\underline\chi_{\mathrm G}(\psi)\le K
-\right\}.
+\right\}\right).
 ```
 
-This is the closed convex hull of pure states of Gaussian border rank at most $`K`$. Its definition permits different Gaussian decompositions and different orbital choices for different mixture components. It does not identify a density matrix's ordinary matrix rank with a Gaussian resource.
+Here $`\mathrm{cl}`$ denotes closure at fixed $`m`$; the choice of matrix norm does not change this finite-dimensional closure. Thus $`\mathcal C_{m,K}`$ is the closed convex hull of pure states of Gaussian border rank at most $`K`$. Its definition permits different Gaussian decompositions and different orbital choices for different mixture components. It does not identify a density matrix's ordinary matrix rank with a Gaussian resource.
 
 The [heat-kernel bound](gaussian_rank.md#low-energy-theorem) extends to every $`\rho\in\mathcal C_{m,K}`$ by linearity and continuity:
 

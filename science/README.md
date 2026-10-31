@@ -65,7 +65,7 @@ This argument concerns a certified trial, and it does not require a theorem abou
 
 ## A locally accessible certificate
 
-[The certification protocol](local_certification.md) chooses one block uniformly at random on each independent copy and measures its bounded local energy. The resulting estimator targets the energy density directly. Its outcome range is independent of system size, yielding a copy count independent of $`m`$ at fixed statistical slack and confidence. Each copy still contains the entire system, and its preparation cost remains extensive.
+[The certification protocol](local_certification.md) chooses one block uniformly at random on each independent copy and measures its bounded local energy. The resulting estimator targets the energy density directly. Its outcome range is independent of system size, yielding a copy count independent of $`m`$ at fixed statistical slack and confidence. Each copy contains $`4m`$ modes. The explicit product source costs $`O(m)`$ preparation gates per copy, while an unknown source's preparation cost is charged separately.
 
 For a pure source, an energy upper-confidence bound below the threshold gives a Gaussian border-rank lower bound. For an unknown mixed source, the precise conclusion excludes the closed convex hull of pure states with a uniformly bounded border rank. The account defines this convex class and its confidence guarantee explicitly.
 

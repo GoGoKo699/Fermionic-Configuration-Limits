@@ -9,15 +9,19 @@ These checks complement the proofs. A finite random ensemble cannot establish a 
 The recorded environment is CPython 3.12.14, NumPy 2.3.5, and SciPy 1.17.0. The third-party packages are pinned in [requirements.txt](requirements.txt), and [.python-version](.python-version) records the Python version. From the repository root, use an isolated environment and run:
 
 ```bash
-python3.12 -m venv /tmp/fermionic-configuration-verification
-/tmp/fermionic-configuration-verification/bin/python -m pip install -r verification/requirements.txt
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /tmp/fermionic-configuration-verification/bin/python verification/checks.py
+python3.12 -m venv /tmp/fcl-verify
+/tmp/fcl-verify/bin/python -m pip install \
+  -r verification/requirements.txt
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  /tmp/fcl-verify/bin/python verification/checks.py
 ```
 
 The script prints one pass summary and writes `verification/results.json`. A failed check raises an exception and prevents a success report. To preserve the committed report while reproducing:
 
 ```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python verification/checks.py --output /tmp/fermionic-configuration-results.json
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python verification/checks.py \
+  --output /tmp/fermionic-configuration-results.json
 ```
 
 The random seed is fixed at `20261031`. No network access, quantum hardware, external datasets, or symbolic-mathematics service is needed after installing the dependencies. Floating-point roundoff can differ across platforms, so compare the stated assertions and tolerances rather than requiring byte-identical JSON. The largest dense matrices are 256 by 256; the largest state vectors have 4096 amplitudes.

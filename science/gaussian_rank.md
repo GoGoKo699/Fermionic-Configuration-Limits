@@ -30,11 +30,11 @@ We set $`\chi_{\mathrm G}(0)=0`$. No orthogonality, common orbital basis, coeffi
 ```math
 \underline\chi_{\mathrm G}(v)
 =\min\left\{K:
-v\in\overline{\{w:\chi_{\mathrm G}(w)\le K\}}
+v\in\mathrm{cl}_2\bigl(\{w:\chi_{\mathrm G}(w)\le K\}\bigr)
 \right\},
 ```
 
-where closure is in the vector $`2`$-norm at fixed mode number. In particular, a border-rank-$`K`$ vector may be a limit of ill-conditioned $`K`$-term sums without itself having an exact $`K`$-term decomposition. Gaussian-unitary invariance holds for both ranks. These conventions agree with Definitions 6–9 in Appendix A.3 of [WWLL26](https://arxiv.org/html/2610.02172v1).
+where $`\mathrm{cl}_2`$ denotes closure in the vector $`2`$-norm at fixed mode number. In particular, a border-rank-$`K`$ vector may be a limit of ill-conditioned $`K`$-term sums without itself having an exact $`K`$-term decomposition. Gaussian-unitary invariance holds for both ranks. These conventions agree with Definitions 6–9 in Appendix A.3 of [WWLL26](https://arxiv.org/html/2610.02172v1).
 
 For each block define
 
