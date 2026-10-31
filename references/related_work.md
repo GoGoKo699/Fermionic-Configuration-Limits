@@ -4,20 +4,20 @@ This document records the primary results used in the proofs and the closest alg
 
 ## What is inherited and what is proved here
 
-The [model](../science/model.md) is an explicit number-conserving, two-body fermionic Hamiltonian on $4m$ modes. Its unperturbed ground state is a product of correlated four-mode pairs. A Gaussian change of variables identifies each pair with the standard four-mode fermionic magic state. The exact target fidelity in [RS24](#RS24), the approximate target-rank bound in [RS26](#RS26), and the stronger asymptotic bound in [WWLL26](#WWLL26) are **inputs**, not new results of this project.
+The [model](../science/model.md) is an explicit number-conserving, two-body fermionic Hamiltonian on $`4m`$ modes. Its unperturbed ground state is a product of correlated four-mode pairs. A Gaussian change of variables identifies each pair with the standard four-mode fermionic magic state. The exact target fidelity in [RS24](#RS24), the approximate target-rank bound in [RS26](#RS26), and the stronger asymptotic bound in [WWLL26](#WWLL26) are **inputs**, not new results of this project.
 
 The new argument changes the output criterion from approximation of one target vector in global norm to a bound for **every state of sufficiently low local energy**. Occupation postselection transfers the target-overlap bound to every subset of blocks. Expanding a positive heat kernel then combines all subset bounds, and scalar Jensen converts the result into an energy-density constraint. The [orthogonal proof](../science/orthogonal_configurations.md) uses a trace over an orthonormal Gaussian basis. The [general-rank proof](../science/gaussian_rank.md#low-energy-theorem) instead uses the uniform approximate-rank input, so it permits nonorthogonal terms, separate orbital choices, arbitrary coefficients, and border rank.
 
-These are different approximation criteria. For example, replacing one block of the ground-state product by an orthogonal two-particle eigenstate gives a state orthogonal to the ground state with total energy one, hence vanishing energy density as $m$ grows. A global-fidelity theorem for the ground state alone therefore does not establish a uniform energy-density theorem. The subset and heat-kernel steps supply the missing argument.
+These are different approximation criteria. For example, replacing one block of the ground-state product by an orthogonal two-particle eigenstate gives a state orthogonal to the ground state with total energy one, hence vanishing energy density as $`m`$ grows. A global-fidelity theorem for the ground state alone therefore does not establish a uniform energy-density theorem. The subset and heat-kernel steps supply the missing argument.
 
-For a state of defect density at most $e$, the explicit unrestricted bound proved here is
+For a state of defect density at most $`e`$, the explicit unrestricted bound proved here is
 
-$$
+```math
 K\ge\frac{8}{9(m+1)}\exp\!\left[mD_{\mathrm{KL}}(e\Vert q)\right],
-\qquad q=1-\frac{256}{27(8+2\sqrt7)},\quad e<q.
-$$
+\qquad q=1-\frac{256}{27(8+2\sqrt7)},\quad e\lt q.
+```
 
-The stronger orthogonal bound is $\log K\ge m[\log2-h(e)]$ for $e<1/2$. The larger threshold requires orthogonality and is not asserted for arbitrary Gaussian rank. The [perturbation argument](../science/perturbations.md) transfers both results to a connected, finite-range interacting family at fixed energy-density accuracy. The [local certificate](../science/local_certification.md) estimates a bounded local energy observable and gives a separate, explicitly defined mixed-state guarantee.
+The stronger orthogonal bound is $`\log K\ge m[\log2-h(e)]`$ for $`e\lt 1/2`$. The larger threshold requires orthogonality and is not asserted for arbitrary Gaussian rank. The [perturbation argument](../science/perturbations.md) transfers both results to a connected, finite-range interacting family at fixed energy-density accuracy. The [local certificate](../science/local_certification.md) estimates a bounded local energy observable and gives a separate, explicitly defined mixed-state guarantee.
 
 ## Comparison at the level of the claimed output
 
@@ -40,7 +40,7 @@ No comparison in this table claims a lower bound for every classical algorithm, 
 
 **Oliver Reardon-Smith.** *The fermionic linear optical extent is multiplicative for 4 qubit parity eigenstates.* arXiv:2407.20934v1, 30 July 2024. [Record](https://arxiv.org/abs/2407.20934v1) · [Primary text](https://arxiv.org/html/2407.20934v1).
 
-Lemma 1, Eqs. (10)–(12), establishes that appending the four-mode state $a_8=(|0000\rangle+|1111\rangle)/\sqrt2$ multiplies the maximum squared Gaussian overlap by $1/2$, for a fixed-parity pure input. Iteration gives $F_G(a_8^{\otimes s})=2^{-s}$. This specific identity is the input to the orthogonal configuration proof. No general multiplicativity theorem for the Gaussian fidelity of arbitrary states is assumed. The paper's extent result and correction of an earlier argument should not be presented as new here.
+Lemma 1, Eqs. (10)–(12), establishes that appending the four-mode state $`a_8=(\vert 0000\rangle+\vert 1111\rangle)/\sqrt2`$ multiplies the maximum squared Gaussian overlap by $`1/2`$, for a fixed-parity pure input. Iteration gives $`F_G(a_8^{\otimes s})=2^{-s}`$. This specific identity is the input to the orthogonal configuration proof. No general multiplicativity theorem for the Gaussian fidelity of arbitrary states is assumed. The paper's extent result and correction of an earlier argument should not be presented as new here.
 
 <a id="RS26"></a>
 
@@ -48,7 +48,7 @@ Lemma 1, Eqs. (10)–(12), establishes that appending the four-mode state $a_8=(
 
 **Oliver Reardon-Smith.** *Exponential lower bounds on the fermionic Gaussian rank of magic states and the bosonic coherent state rank of Fock states.* arXiv:2610.03699v1, 2 October 2026. [Record](https://arxiv.org/abs/2610.03699v1) · [Primary text](https://arxiv.org/html/2610.03699v1).
 
-Theorem 2, Eqs. (5)–(7), gives the bound $(1-\delta^2)8R^s/[9(s+1)]$ on the number of Gaussian terms approximating $a_8^{\otimes s}$ within vector-norm error $\delta<1$, where $R=27(8+2\sqrt7)/256$. The denominator contains $s+1$. Section IV, Eqs. (81)–(87), supports the unnormalized-approximant formulation and uniform dependence on $\delta$, essential when converting rank to overlap. This is a target-vector theorem; the energy-density lift and finite weak-coupling application are the present deductions.
+Theorem 2, Eqs. (5)–(7), gives the bound $`(1-\delta^2)8R^s/[9(s+1)]`$ on the number of Gaussian terms approximating $`a_8^{\otimes s}`$ within vector-norm error $`\delta\lt 1`$, where $`R=27(8+2\sqrt7)/256`$. The denominator contains $`s+1`$. Section IV, Eqs. (81)–(87), supports the unnormalized-approximant formulation and uniform dependence on $`\delta`$, essential when converting rank to overlap. This is a target-vector theorem; the energy-density lift and finite weak-coupling application are the present deductions.
 
 <a id="WWLL26"></a>
 
@@ -56,7 +56,7 @@ Theorem 2, Eqs. (5)–(7), gives the bound $(1-\delta^2)8R^s/[9(s+1)]$ on the nu
 
 **Fuchuan Wei, Kong-Wing Wu, Zhengwei Liu, and Zi-Wen Liu.** *Robust exponential lower bounds for fermionic and bosonic Gaussian ranks.* arXiv:2610.02172v1, 1 October 2026. [Record](https://arxiv.org/abs/2610.02172v1) · [Primary text](https://arxiv.org/html/2610.02172v1).
 
-Theorem 1 treats robust exponential rank growth for tensor powers of a fixed non-Gaussian pure state, with definite parity assumed in the fermionic case. For the four-mode target, Theorem 12, Eqs. (73)–(74), gives finite coefficient bounds and a uniform lower bound $c(1-\delta^2)(343/243)^s$ for an absolute $c>0$. The statement includes approximate border rank. Appendix B.2.1 also records the occupation-postselection closure used in such arguments. Substituting this input into our lift improves the threshold to $100/343$; the improvement is inherited, and no explicit value of $c$ is claimed.
+Theorem 1 treats robust exponential rank growth for tensor powers of a fixed non-Gaussian pure state, with definite parity assumed in the fermionic case. For the four-mode target, Theorem 12, Eqs. (73)–(74), gives finite coefficient bounds and a uniform lower bound $`c(1-\delta^2)(343/243)^s`$ for an absolute $`c>0`$. The statement includes approximate border rank. Appendix B.2.1 also records the occupation-postselection closure used in such arguments. Substituting this input into our lift improves the threshold to $`100/343`$; the improvement is inherited, and no explicit value of $`c`$ is claimed.
 
 <a id="Bravyi05"></a>
 
@@ -72,7 +72,7 @@ Section V, Theorem 1 and Corollary 2 in the checked preprint characterize Gaussi
 
 **Wassily Hoeffding.** *Probability Inequalities for Sums of Bounded Random Variables.* Journal of the American Statistical Association **58**(301), 13–30 (March 1963). DOI: [10.1080/01621459.1963.10500830](https://doi.org/10.1080/01621459.1963.10500830). [Original article scan](https://www.cs.rpi.edu/academics/courses/spring06/random/hoefding.pdf).
 
-Printed page 16, Theorem 2, Eq. (2.6), bounds the upper tail of an average of independent bounded variables. Applying it to the negative of the observed local-energy outcomes, whose range is five, gives $\Pr\{e_\rho>\widehat e+\eta\}\le\exp(-2T\eta^2/25)$. This is the one-sided statement used in [local certification](../science/local_certification.md#statistical-guarantee). A two-sided interval requires the additional factor two in the failure-probability bound. Neither independence nor trusted measurement is supplied by Hoeffding's inequality itself.
+Printed page 16, Theorem 2, Eq. (2.6), bounds the upper tail of an average of independent bounded variables. Applying it to the negative of the observed local-energy outcomes, whose range is five, gives $`\Pr\{e_\rho>\widehat e+\eta\}\le\exp(-2T\eta^2/25)`$. This is the one-sided statement used in [local certification](../science/local_certification.md#statistical-guarantee). A two-sided interval requires the additional factor two in the failure-probability bound. Neither independence nor trusted measurement is supplied by Hoeffding's inequality itself.
 
 ## Configuration methods and size extensivity
 
@@ -114,7 +114,7 @@ The paper studies one- and two-dimensional Heisenberg and Hubbard systems up to 
 
 **Kenji Sugisaki.** *Size-consistent implementation of Hamiltonian simulation-based quantum-selected configuration interaction method for the supramolecular approach.* arXiv:2510.23154v2, 5 January 2026; v1 appeared 27 October 2025. [Record](https://arxiv.org/abs/2510.23154v2) · [Primary PDF](https://arxiv.org/pdf/2510.23154v2).
 
-The introduction and Supplementary Information B analyze the sampling burden associated with size consistency. The proposed treatment uses localized monomer information and augments dimer spaces with required Cartesian-product configurations. This already identifies the product-completion issue. Our parameter $K$ counts the final global expansion after any such completion; it does not count only the configurations directly sampled. Keeping a product representation without materializing the global expansion is an allowed escape from the representation class studied here.
+The introduction and Supplementary Information B analyze the sampling burden associated with size consistency. The proposed treatment uses localized monomer information and augments dimer spaces with required Cartesian-product configurations. This already identifies the product-completion issue. Our parameter $`K`$ counts the final global expansion after any such completion; it does not count only the configurations directly sampled. Keeping a product representation without materializing the global expansion is an allowed escape from the representation class studied here.
 
 <a id="EIDOS25"></a>
 

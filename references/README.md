@@ -2,6 +2,12 @@
 
 The [primary-source comparison](related_work.md) records the precise versions, theorem locations, imported assumptions, and scope boundaries. The [BibTeX bibliography](bibliography.bib) supplies citation metadata.
 
+## Educational anchor
+
+- **McArdle20:** McArdle et al., [Quantum computational chemistry](https://doi.org/10.1103/RevModPhys.92.015003). The [source-to-project bridge](../learning/MCARDLE_BRIDGE.md#source-map) records the checked publisher manuscript and exact teaching locators. The review supplies background; the research inputs below support the stated fidelity and rank bounds.
+
+## Mathematical research inputs
+
 <a id="rs24"></a>
 
 - **RS24:** [Reardon-Smith, four-mode Gaussian fidelity and extent](related_work.md#RS24).

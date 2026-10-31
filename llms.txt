@@ -31,6 +31,12 @@ Canonical entrypoints:
 - verification/README.md: documented scientific checks and their limits.
 - verification/checks.py: executable finite algebraic/numerical checks.
 - verification/results.json: actual recorded results, distinct from a new run.
+- learning/MCARDLE_BRIDGE.md: the selected McArdle et al. (2020) educational
+  anchor, verified section/page/equation locators, translated notation,
+  worked examples and the missing project-specific reasoning.
+- learning/MILESTONES.md: exactly 30 common project-intrinsic milestones;
+  M01-M12 background/preliminaries and M13-M30 narrative/innovation,
+  with local-to-global synthesis at the end of each phase.
 
 Reader routes:
 - Story: science/README.md, model.md, algorithmic_scope.md.
@@ -40,14 +46,23 @@ Reader routes:
 - Measurement and statistics: local_certification.md.
 - Attribution: references/related_work.md and bibliography.bib.
 - Reproduction: verification/README.md, then its documented commands.
+- Learning: learning/MCARDLE_BRIDGE.md and learning/MILESTONES.md, following
+  their source pointers into the canonical science pages.
 
 Preserve these distinctions when explaining or editing:
 - K counts global Gaussian terms, not arbitrary vector-space dimension,
   raw quantum shots, matrix entries, or every algorithm's runtime.
+- Gaussian functions used as chemistry orbital basis functions are not the
+  same concept as fermionic Gaussian many-body states. The McArdle review
+  supplies the educational vocabulary; the later fidelity/rank papers are
+  separate research inputs, and the energy-density lift is proved here.
+- A linear CI expansion and an exponential coupled-cluster parametrization
+  have different resource counts. The explicit product has a compact doubles
+  cluster description even when its Gaussian expansion is exponential.
 - The half-energy threshold requires an orthonormal Gaussian basis. General
   nonorthogonal rank and border rank use their smaller certified threshold.
-- R = 27(8+2sqrt(7))/256 and q = 1-1/R belong to the explicit imported input.
-  The all-state energy-density lift is proved here. The improved base 343/243
+- R = 27(8+2sqrt(7))/256 is the explicit imported rank base. The energy-density
+  lift proved here gives q = 1-1/R. The improved rank base 343/243
   is inherited from Wei et al., with an unspecified absolute prefactor.
 - Every exponential-rate formula has its stated energy range. Do not extend
   binary relative entropy beyond the permitted Chernoff parameter regime.
