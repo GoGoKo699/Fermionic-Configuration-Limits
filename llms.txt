@@ -1,0 +1,68 @@
+# Fermionic Configuration Limits
+
+This repository studies how fixed local energy accuracy constrains the number
+of terms in global fermionic Gaussian expansions. The full scientific account
+is organized by topic under science/.
+
+Canonical entrypoints:
+- README.md: scientific question, exact headline bounds, reading route,
+  reproduction commands, scope and purpose/contact.
+- science/README.md: connected physical account and the two proof routes.
+- science/model.md: CAR conventions; explicit number-conserving two-body
+  Hamiltonian; complete block spectrum; H0 >= Dm; exact preparation and costs.
+- science/gaussian_rank.md: exact/border-rank definitions; uniform unnormalized
+  approximation input; subset conditioning; positive heat kernel; Jensen and
+  Chernoff optimization; all endpoints; stronger inherited asymptotic input.
+- science/orthogonal_configurations.md: orthonormal Gaussian-span theorem,
+  arbitrary orbital optimization, exact best-determinant energy and the
+  subexponential orthogonal configuration energy floor.
+- science/perturbations.md: norm-perturbation transfer, equal energy accuracy,
+  connected noncommuting hopping family and explicit constant example.
+- science/local_certification.md: trusted local measurement, exact one-sided
+  sample count, pure-state certificate, closed-convex-hull mixed-state
+  guarantee, covariance counterexample and full-copy resource accounting.
+- science/algorithmic_scope.md: QSCI/SQD/nonorthogonal-CI output contracts,
+  explicit versus implicit expansion, matched accuracy, charged resources,
+  and compact product/geminal/cluster/tensor-network alternatives.
+- references/README.md: canonical short citation keys.
+- references/related_work.md: exact primary-source comparisons and versions,
+  inherited ingredients, consequence proved here, and comparison boundaries.
+- references/bibliography.bib: reusable primary bibliography.
+- verification/README.md: documented scientific checks and their limits.
+- verification/checks.py: executable finite algebraic/numerical checks.
+- verification/results.json: actual recorded results, distinct from a new run.
+
+Reader routes:
+- Story: science/README.md, model.md, algorithmic_scope.md.
+- General-rank theorem: model.md, gaussian_rank.md, then its cited inputs.
+- Orbital/configuration optimization: orthogonal_configurations.md.
+- Connected physical example: model.md, perturbations.md.
+- Measurement and statistics: local_certification.md.
+- Attribution: references/related_work.md and bibliography.bib.
+- Reproduction: verification/README.md, then its documented commands.
+
+Preserve these distinctions when explaining or editing:
+- K counts global Gaussian terms, not arbitrary vector-space dimension,
+  raw quantum shots, matrix entries, or every algorithm's runtime.
+- The half-energy threshold requires an orthonormal Gaussian basis. General
+  nonorthogonal rank and border rank use their smaller certified threshold.
+- R = 27(8+2sqrt(7))/256 and q = 1-1/R belong to the explicit imported input.
+  The all-state energy-density lift is proved here. The improved base 343/243
+  is inherited from Wei et al., with an unspecified absolute prefactor.
+- Every exponential-rate formula has its stated energy range. Do not extend
+  binary relative entropy beyond the permitted Chernoff parameter regime.
+- Energies are per four-mode block; divide by four for energy per mode.
+- Two-body fermionic interactions can involve four modes. No two-qubit
+  locality statement is implied.
+- The ground state is easy to prepare and has compact classical product,
+  geminal, cluster and tensor-network descriptions. No general hardness or
+  quantum advantage is proved.
+- The connected perturbation comparison certifies an energy-accurate trial.
+  It does not prove a perturbed gap, high fidelity or easy exact preparation.
+- The local sample count assumes independent identical copies and trusted
+  measurements. Preparing each full copy of the explicit product source
+  costs O(m) gates.
+- The mixed-state result excludes a precisely defined convex hull; it is
+  not a claim about ordinary density-matrix rank or every decomposition term.
+- Finite checks validate conventions and examples, not universal asymptotic
+  theorems, priority, peer review, or future hosted rendering.

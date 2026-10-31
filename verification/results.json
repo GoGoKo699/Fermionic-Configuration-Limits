@@ -1,0 +1,176 @@
+{
+  "report_format": 1,
+  "status": "passed",
+  "checks_passed": 973,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "random_seed": 20261031,
+  "tolerances": {
+    "matrix_absolute": 1e-12,
+    "screen_absolute": 2e-11
+  },
+  "local_model": {
+    "spectrum": [
+      0.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      5.0,
+      5.0
+    ],
+    "car_max_frobenius_residual": 0.0,
+    "minimum_eigenvalue_h_minus_defect": -1.6653345369377348e-16,
+    "gaussian_saturator_energy": 0.5,
+    "gaussian_equivalence_vector_error": 0.0,
+    "number_conserving_preparation_vector_error": 1.1102230246251565e-16,
+    "clifford_preparation_vector_error": 0.0,
+    "eigenbasis_measurement_residual": 3.386139256048237e-16,
+    "heat_kernel_saturations": [
+      {
+        "beta": 0.0,
+        "expectation": 1.0,
+        "bound": 1.0
+      },
+      {
+        "beta": 0.1,
+        "expectation": 0.9524187090179798,
+        "bound": 0.9524187090179798
+      },
+      {
+        "beta": 0.7,
+        "expectation": 0.7482926518957047,
+        "bound": 0.7482926518957047
+      },
+      {
+        "beta": 2.0,
+        "expectation": 0.5676676416183064,
+        "bound": 0.5676676416183064
+      },
+      {
+        "beta": 6.0,
+        "expectation": 0.5012393760883329,
+        "bound": 0.5012393760883331
+      }
+    ]
+  },
+  "gaussian_screening": [
+    {
+      "blocks": 1,
+      "modes": 4,
+      "trials": 40,
+      "largest_subset_ratio": 0.6315578645587766,
+      "largest_heat_kernel_ratio": 0.9815932296473451,
+      "lowest_sampled_energy_density": 1.01692728507145
+    },
+    {
+      "blocks": 2,
+      "modes": 8,
+      "trials": 40,
+      "largest_subset_ratio": 0.4517661598891738,
+      "largest_heat_kernel_ratio": 0.9316970821610548,
+      "lowest_sampled_energy_density": 1.60940924440163
+    },
+    {
+      "blocks": 3,
+      "modes": 12,
+      "trials": 20,
+      "largest_subset_ratio": 0.31623328055529654,
+      "largest_heat_kernel_ratio": 0.8843496300885418,
+      "lowest_sampled_energy_density": 1.84435999509577
+    }
+  ],
+  "orthogonal_selected_spaces": [
+    {
+      "blocks": 2,
+      "configurations": 1,
+      "variational_energy": 1.0000000000000004,
+      "energy_density": 0.5,
+      "entropy_lower_bound_on_configurations": 1.0,
+      "largest_heat_kernel_to_trace_bound_ratio": 1.0000000000000007
+    },
+    {
+      "blocks": 2,
+      "configurations": 2,
+      "variational_energy": 0.5,
+      "energy_density": 0.25,
+      "entropy_lower_bound_on_configurations": 1.299038105676658,
+      "largest_heat_kernel_to_trace_bound_ratio": 0.9975273768433647
+    },
+    {
+      "blocks": 2,
+      "configurations": 3,
+      "variational_energy": 0.29289321881345254,
+      "energy_density": 0.14644660940672627,
+      "entropy_lower_bound_on_configurations": 1.7389879389436405,
+      "largest_heat_kernel_to_trace_bound_ratio": 0.995610261228611
+    },
+    {
+      "blocks": 2,
+      "configurations": 4,
+      "variational_energy": -2.325575258505045e-16,
+      "energy_density": 0.0,
+      "entropy_lower_bound_on_configurations": 4.0,
+      "largest_heat_kernel_to_trace_bound_ratio": 0.9950608675520047
+    }
+  ],
+  "connected_perturbations": {
+    "link_norm": 1.0,
+    "commutator_witness_residual": 0.0,
+    "couplings": [
+      {
+        "lambda": 0.015625,
+        "ground_energy_two_blocks": -3.0517578123345074e-05,
+        "easy_trial_energy": 0.0,
+        "trial_error_per_block": 1.5258789061672537e-05
+      },
+      {
+        "lambda": 0.03125,
+        "ground_energy_two_blocks": -0.00012207031238611974,
+        "easy_trial_energy": 0.0,
+        "trial_error_per_block": 6.103515619305987e-05
+      },
+      {
+        "lambda": 0.0625,
+        "ground_energy_two_blocks": -0.00048828124272598484,
+        "easy_trial_energy": 0.0,
+        "trial_error_per_block": 0.00024414062136299242
+      }
+    ]
+  },
+  "covariance_counterexample": {
+    "blocks": 2,
+    "two_point_data_difference_frobenius": 3.1401849173675503e-16,
+    "product_pair_energy": 0.0,
+    "two_term_cat_energy": 1.9999999999999996,
+    "cat_occupation_strings": [
+      "11001100",
+      "00110011"
+    ]
+  },
+  "equal_accuracy_example": {
+    "R": 1.4018381671776872,
+    "q": 0.28665089636324115,
+    "delta": 0.03125,
+    "epsilon": 0.125,
+    "effective_defect_density": 0.1875,
+    "orthogonal_exponent_bits_per_block": 0.30378773987485413,
+    "unrestricted_exponent_bits_per_block": 0.03772882967782792,
+    "unrestricted_prefactor": "8 / (9 * (m + 1))",
+    "chernoff_optimizer_beta": 0.5546312281678395,
+    "chernoff_expression_residual": 2.7755575615628914e-17
+  },
+  "limits": "Finite floating-point checks validate signs, spectra and representation conventions. The random Gaussian ensemble is not a proof of a universal bound or a Gaussian optimization. The analytic proofs establish the asymptotic statements; the two-block perturbation data make no thermodynamic gap or ground-state preparation claim."
+}
