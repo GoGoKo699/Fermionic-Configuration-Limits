@@ -35,7 +35,7 @@ The mathematical measurement model is trusted and ideal, and the copies are inde
 Define the energy density per four-mode block by
 
 ```math
-e_\rho=\frac{\operatorname{Tr}(\rho H_0)}m.
+e_\rho=\frac{\mathrm{Tr}(\rho H_0)}m.
 ```
 
 Then each outcome satisfies
@@ -44,7 +44,7 @@ Then each outcome satisfies
 0\le X\le5,
 \qquad
 \mathbb E[X]
-=\frac1m\sum_{j=1}^{m}\operatorname{Tr}(\rho h_j)
+=\frac1m\sum_{j=1}^{m}\mathrm{Tr}(\rho h_j)
 =e_\rho.
 ```
 
@@ -124,7 +124,7 @@ Purity is not required for a meaningful representation certificate, but the clai
 
 ```math
 \mathcal C_{m,K}
-=\overline{\operatorname{conv}}\left\{
+=\overline{\mathrm{conv}}\left\{
 |\psi\rangle\langle\psi|:
 \|\psi\|_2=1,
 \quad\underline\chi_{\mathrm G}(\psi)\le K
@@ -136,7 +136,7 @@ This is the closed convex hull of pure states of Gaussian border rank at most $`
 The [heat-kernel bound](gaussian_rank.md#low-energy-theorem) extends to every $`\rho\in\mathcal C_{m,K}`$ by linearity and continuity:
 
 ```math
-\operatorname{Tr}(\rho e^{-\beta D_m})
+\mathrm{Tr}(\rho e^{-\beta D_m})
 \le\frac98K(m+1)
 \big[(1-q)+qe^{-\beta}\big]^m
 \quad(\beta\ge0).
@@ -146,8 +146,8 @@ Jensen's inequality also holds for the spectral probability distribution induced
 
 ```math
 e^{-\beta em}
-\le e^{-\beta\operatorname{Tr}(\rho D_m)}
-\le\operatorname{Tr}(\rho e^{-\beta D_m}).
+\le e^{-\beta\mathrm{Tr}(\rho D_m)}
+\le\mathrm{Tr}(\rho e^{-\beta D_m}).
 ```
 
 The same optimization therefore implies the deterministic restriction

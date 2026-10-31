@@ -126,7 +126,7 @@ The operator $`A`$ takes $`R`$ to $`L`$ with positive sign, and $`A^\dagger`$ re
 On the span of $`L,R`$, the Hamiltonian is simply
 
 ```math
-h\big|_{\operatorname{span}\{L,R\}}
+h\big|_{\mathrm{span}\{L,R\}}
 =\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.
 ```
 
@@ -419,11 +419,11 @@ The interaction strength is fixed as $`m`$ grows. The comparison does not assume
 
 ## 12. Learning a representation bound from local measurements
 
-Suppose a physical source supplies independent copies of the same state $`\rho`$. A density operator describes a pure state or a statistical mixture; its expectation of $`H`$ is $`\operatorname{Tr}(\rho H)`$, where the trace sums diagonal matrix entries. For each copy, choose a block $`J`$ uniformly using classical randomness and measure $`h_J`$. The outcome $`X`$ belongs to $`\{0,1,2,5\}`$, and
+Suppose a physical source supplies independent copies of the same state $`\rho`$. A density operator describes a pure state or a statistical mixture; its expectation of $`H`$ is $`\mathrm{Tr}(\rho H)`$, where the trace sums diagonal matrix entries. For each copy, choose a block $`J`$ uniformly using classical randomness and measure $`h_J`$. The outcome $`X`$ belongs to $`\{0,1,2,5\}`$, and
 
 ```math
-\mathbb E[X]=\frac1m\sum_j\operatorname{Tr}(\rho h_j)
-=\frac{\operatorname{Tr}(\rho H_0)}m=:e_\rho.
+\mathbb E[X]=\frac1m\sum_j\mathrm{Tr}(\rho h_j)
+=\frac{\mathrm{Tr}(\rho H_0)}m=:e_\rho.
 ```
 
 One observation estimates the density, not the total energy. Its range stays five as the system grows. With sample mean $`\widehat e`$, choose

@@ -1,6 +1,6 @@
 # Orthogonal Gaussian configurations at fixed energy density
 
-For the [explicit Hamiltonian $`H_0`$](model.md), no subexponential orthogonal Gaussian expansion can improve the limiting energy density below the best single Slater determinant. This remains true after arbitrary global orbital optimization and arbitrary selection of the configurations.
+For the [explicit Hamiltonian](model.md) $`H_0`$, no subexponential orthogonal Gaussian expansion can improve the limiting energy density below the best single Slater determinant. This remains true after arbitrary global orbital optimization and arbitrary selection of the configurations.
 
 The assumption that the configurations are orthogonal is used explicitly. [The general Gaussian-rank theorem](gaussian_rank.md) covers nonorthogonal expansions, with a smaller energy threshold. The threshold $`1/2`$ proved here must not be transferred to that larger representation class.
 
@@ -9,7 +9,7 @@ The assumption that the configurations are orthogonal is used explicitly. [The g
 A selected configuration space has the form
 
 ```math
-\mathcal S=\operatorname{span}\{U_G\lvert x\rangle:x\in X\},
+\mathcal S=\mathrm{span}\{U_G\lvert x\rangle:x\in X\},
 \qquad K=\#X,
 ```
 
@@ -36,8 +36,7 @@ The target is energy at most $`em`$, with a constant density $`e`$. Since every 
 For a normalized fixed-parity state $`\phi`$, write
 
 ```math
-F_G(\phi)=\max_{g\ {
-m pure\ Gaussian}}
+F_G(\phi)=\max_{g\,\mathrm{pure\ Gaussian}}
 \bigl|\langle g\vert\phi\rangle\bigr|^2.
 ```
 
@@ -144,7 +143,7 @@ Let $`\Pi_{\mathcal S}`$ be the orthogonal projector onto the selected space. Th
 ```math
 \begin{aligned}
 \langle\psi\vert e^{-\beta D_m}\vert\psi\rangle
-&\le\operatorname{Tr}(\Pi_{\mathcal S}e^{-\beta D_m})\\
+&\le\mathrm{Tr}(\Pi_{\mathcal S}e^{-\beta D_m})\\
 &=\sum_{i=1}^K\langle g_i\vert e^{-\beta D_m}\vert g_i\rangle\\
 &\le K\left(\frac{1+e^{-\beta}}2\right)^m.
 \end{aligned}
