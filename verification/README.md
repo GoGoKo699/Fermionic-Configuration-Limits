@@ -24,9 +24,9 @@ The random seed is fixed at `20261031`. No network access, quantum hardware, ext
 
 ## Recorded results
 
-The recorded run passed **973 checks** with the pinned versions above. Its local spectrum was zero once, one four times, two nine times, and five twice. The exact Gaussian map and Clifford preparation had zero vector residual; the number-conserving preparation residual was approximately $1.1\times10^{-16}$. The determinant saturator had energy exactly $1/2$ and saturated the tested heat-kernel values to floating-point precision.
+The recorded run passed **973 checks** with the pinned versions above. Its local spectrum was zero once, one four times, two nine times, and five twice. The exact Gaussian map and Clifford preparation had zero vector residual; the number-conserving preparation residual was approximately $`1.1\times10^{-16}`$. The determinant saturator had energy exactly $`1/2`$ and saturated the tested heat-kernel values to floating-point precision.
 
-All 100 random Gaussian samples satisfied every tested subset and heat-kernel inequality. The selected orbital spaces gave the four variational energies displayed below. For the connected two-block systems at couplings $1/64$, $1/32$, and $1/16$, the ground energies were approximately $-3.05176\times10^{-5}$, $-1.22070\times10^{-4}$, and $-4.88281\times10^{-4}$, while the simple trial retained energy zero. The two covariance-example states had matching two-point matrices and total energies zero and two.
+All 100 random Gaussian samples satisfied every tested subset and heat-kernel inequality. The selected orbital spaces gave the four variational energies displayed below. For the connected two-block systems at couplings $`1/64`$, $`1/32`$, and $`1/16`$, the ground energies were approximately $`-3.05176\times10^{-5}`$, $`-1.22070\times10^{-4}`$, and $`-4.88281\times10^{-4}`$, while the simple trial retained energy zero. The two covariance-example states had matching two-point matrices and total energies zero and two.
 
 The result file preserves unrounded values, numerical residuals, and the stated limits of interpretation.
 
@@ -55,15 +55,15 @@ There are 40 samples on four modes, 40 on eight modes, and 20 on twelve modes. E
 
 A passive orbital rotation produces the explicit determinant saturator and an orthogonal Gaussian partner on each block. On two blocks, their four product configurations span the exact target. Taking the first one, two, three, and four configurations gives exact total variational energies
 
-$$
+```math
 1,\qquad \frac12,\qquad 1-\frac1{\sqrt2},\qquad0.
-$$
+```
 
 These examples test the orthogonal-space inequality in the range where it constrains the energy, rather than only at random high-energy states. The script checks both the optimized entropy bound and the operator-norm-to-positive-trace step.
 
 ## Tolerances and limits
 
-The local matrix tolerance is $10^{-12}$; accumulated random-circuit and selected-space inequalities allow absolute slack $2\times10^{-11}$. The report records residuals and the maximum tested ratios to the bounds.
+The local matrix tolerance is $`10^{-12}`$; accumulated random-circuit and selected-space inequalities allow absolute slack $`2\times10^{-11}`$. The report records residuals and the maximum tested ratios to the bounds.
 
 The four-mode diagonalization is a finite check of the analytic spectrum in [model.md](../science/model.md). Universal Gaussian fidelity is imported from [RS24](../references/README.md#rs24), and unrestricted approximate Gaussian rank from [RS26](../references/README.md#rs26); the script does not re-prove either external theorem. The general-rank portion of the script evaluates its Chernoff constants only, not arbitrary nonorthogonal decompositions.
 

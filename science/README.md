@@ -8,41 +8,41 @@ This distinction matters for algorithms that select configurations from quantum 
 
 The [model](model.md) starts from four fermionic modes and the two-particle state
 
-$$
+```math
 |M\rangle=\frac{|1100\rangle+|0011\rangle}{\sqrt2}.
-$$
+```
 
-A pair-hopping term favors its coherence, while a number penalty excludes unwanted particle sectors. Their sum is a positive, number-conserving, two-body fermionic Hamiltonian with a unique zero-energy state and gap one. Summing this block Hamiltonian over $m$ blocks gives $H_0$, with exact ground state $M^{\otimes m}$ and $4m$ modes.
+A pair-hopping term favors its coherence, while a number penalty excludes unwanted particle sectors. Their sum is a positive, number-conserving, two-body fermionic Hamiltonian with a unique zero-energy state and gap one. Summing this block Hamiltonian over $`m`$ blocks gives $`H_0`$, with exact ground state $`M^{\otimes m}`$ and $`4m`$ modes.
 
 This ground state is a product of small correlated units. It has an explicit linear-size circuit and constant parallel depth. It is also a simple classical product or geminal state. Yet its global occupation expansion contains exponentially many terms. The nontrivial question is whether arbitrary orbital rotations, nonorthogonal configurations, or acceptance of nonzero energy density can eliminate that expansion cost.
 
 The analytical defect operator
 
-$$
+```math
 D_m=\sum_{j=1}^{m}(I-P_j),
 \qquad P_j=|M\rangle\langle M|_j,
-$$
+```
 
-counts failed block projectors and obeys $D_m\le H_0$. Low physical energy therefore implies a small mean number of defects. The proof uses this expectation constraint, not a promise of high global fidelity. Indeed, exciting just one block produces a state orthogonal to the ground state with energy density $1/m$. A ground-state-fidelity statement alone does not control the whole low-energy region.
+counts failed block projectors and obeys $`D_m\le H_0`$. Low physical energy therefore implies a small mean number of defects. The proof uses this expectation constraint, not a promise of high global fidelity. Indeed, exciting just one block produces a state orthogonal to the ground state with energy density $`1/m`$. A ground-state-fidelity statement alone does not control the whole low-energy region.
 
 ## The two proof routes
 
 Both routes first control simultaneous success of any subset of block projectors. Occupation measurement on complementary modes preserves Gaussianity in every nonzero conditional branch. This lets a theorem about a tensor-power target constrain an arbitrary reduced subset, even when the original state has global Gaussian correlations.
 
-For an **orthogonal Gaussian configuration space**, the imported exact Gaussian-fidelity identity gives a factor of one half for each retained block. A positive operator expectation in a normalized state is at most its trace over the containing space. This introduces the number of orthonormal Gaussian configurations, $K$, without assuming that the selected configurations came from sampling or that the orbitals were chosen efficiently.
+For an **orthogonal Gaussian configuration space**, the imported exact Gaussian-fidelity identity gives a factor of one half for each retained block. A positive operator expectation in a normalized state is at most its trace over the containing space. This introduces the number of orthonormal Gaussian configurations, $`K`$, without assuming that the selected configurations came from sampling or that the orbitals were chosen efficiently.
 
-For an **arbitrary Gaussian expansion**, orthogonalizing the list would generally destroy Gaussianity. The proof instead imports a robust approximate-rank theorem. Because it allows unnormalized approximants with errors arbitrarily close to one, it bounds even exponentially small target overlap in terms of $K$. Conditioning then gives the needed subset estimates without imposing a Gram-matrix or coefficient bound. Continuity extends the argument to border rank.
+For an **arbitrary Gaussian expansion**, orthogonalizing the list would generally destroy Gaussianity. The proof instead imports a robust approximate-rank theorem. Because it allows unnormalized approximants with errors arbitrarily close to one, it bounds even exponentially small target overlap in terms of $`K`$. Conditioning then gives the needed subset estimates without imposing a Gram-matrix or coefficient bound. Continuity extends the argument to border rank.
 
 The common final step is the positive expansion
 
-$$
+```math
 e^{-\beta D_m}
 =e^{-\beta m}\prod_{j=1}^{m}
 \big[I+(e^\beta-1)P_j\big],
 \qquad\beta\ge0.
-$$
+```
 
-Every coefficient is nonnegative, so every subset estimate can be inserted without cancellation. Scalar Jensen's inequality lower-bounds this heat-kernel expectation using the mean defect energy. Optimizing over $\beta$ produces a binary relative-entropy exponent, the same mathematical optimization familiar from Chernoff bounds.
+Every coefficient is nonnegative, so every subset estimate can be inserted without cancellation. Scalar Jensen's inequality lower-bounds this heat-kernel expectation using the mean defect energy. Optimizing over $`\beta`$ produces a binary relative-entropy exponent, the same mathematical optimization familiar from Chernoff bounds.
 
 | Ingredient | Orthogonal route | Arbitrary-expansion route |
 | --- | --- | --- |
@@ -57,7 +57,7 @@ The sharper orthogonal threshold cannot be transferred to an arbitrary nonorthog
 
 ## Connected interactions at the same accuracy
 
-The decoupled model isolates the mechanism. [The perturbation theorem](perturbations.md) shows that it also gives an energy-accuracy separation for weak connected interactions. If a perturbation has norm at most $\delta m$, the original product state stays within $2\delta m$ of the perturbed ground energy. Any state within $\epsilon m$ of that same optimum has unperturbed defect density at most $\epsilon+2\delta$.
+The decoupled model isolates the mechanism. [The perturbation theorem](perturbations.md) shows that it also gives an energy-accuracy separation for weak connected interactions. If a perturbation has norm at most $`\delta m`$, the original product state stays within $`2\delta m`$ of the perturbed ground energy. Any state within $`\epsilon m`$ of that same optimum has unperturbed defect density at most $`\epsilon+2\delta`$.
 
 There is therefore a nonempty interval of fixed accuracies for which the explicit product trial succeeds and every successful Gaussian expansion requires exponentially many terms. Nearest-block hopping supplies a connected, bounded-range, number-conserving example whose links fail to commute with the original blocks. Neither the coupling strength nor the allowed error density needs to vanish with system size.
 
@@ -65,7 +65,7 @@ This argument concerns a certified trial, and it does not require a theorem abou
 
 ## A locally accessible certificate
 
-[The certification protocol](local_certification.md) chooses one block uniformly at random on each independent copy and measures its bounded local energy. The resulting estimator targets the energy density directly. Its outcome range is independent of system size, yielding a copy count independent of $m$ at fixed statistical slack and confidence. Each copy still contains the entire system, and its preparation cost remains extensive.
+[The certification protocol](local_certification.md) chooses one block uniformly at random on each independent copy and measures its bounded local energy. The resulting estimator targets the energy density directly. Its outcome range is independent of system size, yielding a copy count independent of $`m`$ at fixed statistical slack and confidence. Each copy still contains the entire system, and its preparation cost remains extensive.
 
 For a pure source, an energy upper-confidence bound below the threshold gives a Gaussian border-rank lower bound. For an unknown mixed source, the precise conclusion excludes the closed convex hull of pure states with a uniformly bounded border rank. The account defines this convex class and its confidence guarantee explicitly.
 
